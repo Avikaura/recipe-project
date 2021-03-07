@@ -372,7 +372,7 @@ body{
 }
 
 header{
-    background-image: url("img/ingredients-1920w.jpg");
+    background-image: url("../img/ingredients-1920w.jpg");
     display: block;
     height: 350px;
     grid-column: 1 / span 2;
