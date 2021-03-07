@@ -1,7 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
 
 
-#header{
+*{
+    box-sizing:border-box;
+    }
+    
+:root{
+    --bg:white;
+    }
+    
+    
+body{
+    
+    margin:0;
+    background-color: var(--bg);
+    }
+
+.recipe{
+    display: grid;
+}
+
+header{
     background-image: url("/img/ingredients-480w.jpg");
     background-color:#353A42;
     background-blend-mode: multiply;
@@ -9,10 +28,10 @@
     position: static;
     box-sizing:content-box;
     width: auto;
-    max-width: 480px;
+    /*max-width: 480px;*/
     display: flow-root;
     background-repeat: no-repeat;
-    margin: -1vw auto auto -1vw;
+    /*margin: -1vw -1vw auto -1vw;*/
     
 }
 
@@ -22,26 +41,29 @@
     background-color: #ffbc48;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 0.6em;
+    font-size: 0.8em;
     padding: 0.1em;
     display: inline-block;
+    text-transform: capitalize;
 }
 .h1{
     color: white;
     font-family: fira sans;
-    font-size: 1.9rem;
+    font-size:2.3em;
     display: block;
     margin: 0.1vw auto auto 2.4vw;
-    max-width: 360px;
+    font-weight: bold;
+    /*max-width: 360px;*/
+    text-transform: capitalize;
 }
 .header-para{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
-    font-size: 0.95em;
+    font-size: 1.2em;
     display: block ;
-    max-width: 360px;
-    height: auto;
+    /*max-width: 360px;*/
+    /*height: auto;*/
     margin: -0.3vw 1vw auto 2.5vw;
 }
 .header-span{
@@ -53,14 +75,16 @@
     font-weight: bold;
     font-family: fira sans;
     color: white;
-    font-size: 0.7em;
+    font-size: 0.8em;
     text-shadow: white 0.5px -0.1px;
     display:block;
     max-width: 100%;
     list-style-type: none;
     padding: 2.5vw;
     margin-top:-2.5vw;
+    margin-bottom: 0vw;
     line-height: 1.5em;
+    text-transform: uppercase;
 }
 .list-span{
     background-color: #ffbc48;
@@ -72,40 +96,51 @@
     text-shadow: black 0.5px -0.1px;
 }
 
-#nav{
+nav{
     background-color: #222028;
-    max-width: 480px;
-    margin:-3.2vw auto auto -1vw;
+   
+    margin:0vw 0vw auto -1vw;
+    /*margin-top: -4vw;*/
+   
 }
 
 .nav-list{
   
     font-family: fira sans;
     font-weight: bold;
-    font-size: 0.65em;
+    font-size: 1em;
     line-height: 2em;
     text-shadow: #ffbc48 0.5px -0.1px;
     list-style-type: none;
     padding: 2.5vw;
 }
 
+.href:hover{
+    color: khaki;
+    /*text-shadow: 1px 0px #ffbc48;*/
+    font-size: 1.1em;
+}
+
 .href{
     text-decoration: none;
     color: #ffbc48;
+    transition: 0.1s;
 }
-
-#main-story{
+.main-story,.main-ingredients,.main-process{
+    margin-left:15px;
+}
+.main-story{
     background-color: white;
     color: black;
     box-sizing: content-box;
-    max-width: 480px;
+    /*max-width: 480px;*/
     margin: 1vw;
 }
 
 .story-heading{
     font-family: fira sans;
     font-weight: bolder;
-    font-size:0.9em;
+    font-size:1.5em;
     text-shadow:black 0.9px -0.3px;
     letter-spacing: 0.05em;
     margin-top: 3.5vw;
@@ -113,7 +148,7 @@
 .story-para{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:black;
-    font-size: 0.72em;
+    font-size: 1em;
     text-align: justify;
     
 }
@@ -127,16 +162,21 @@
     border-left: 3px solid #ffbc48;
 }
 
+blockquote{
+    margin-block-start: 1em;
+    border-left: 4px solid #ffbc48;
+    margin-inline-start: 0px;
+}
 .story-article-para{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    font-size: 0.72em;
-    padding-left: 0.5em;
+    font-size: 0.89em;
+    padding-left: 0.6em;
     text-align: justify;
 }
 
 .story-navbar{
-    max-width: 480px;
+   /* max-width: 480px;*/
     display: block;
     padding: 0.1em;
 }
@@ -145,18 +185,18 @@ img{
 }
 
 
-#main-ingredients{
+.main-ingredients{
     background-color: white;
     color: black;
     box-sizing: content-box;
-    max-width: 480px;
-    margin: 1vw;
+   /* max-width: 480px;*/
+    /*margin: 1vw;*/
 }
 
 .ingredients-heading{
     font-family: fira sans;
     font-weight: bolder;
-    font-size:0.9em;
+    font-size:1.5em;
     text-shadow:black 0.9px -0.3px;
     letter-spacing: 0.05em;
     margin-top: 4vw;
@@ -165,7 +205,7 @@ img{
 .ingredients-list{
     color: black;
      font-family:Georgia, 'Times New Roman', Times, serif;
-     font-size: 0.7em;
+     font-size: 1em;
      line-height: 1.5em;
      padding: 2.5vw;
  }
@@ -173,7 +213,7 @@ img{
  .equipment-heading{
     font-family: fira sans;
     font-weight: bolder;
-    font-size:0.9em;
+    font-size:1.5em;
     text-shadow:black 0.9px -0.3px;
     letter-spacing: 0.05em;
     margin-top: 4vw;
@@ -182,13 +222,29 @@ img{
 .equipment-list{
     color: black;
      font-family:Georgia, 'Times New Roman', Times, serif;
-     font-size: 0.7em;
+     font-size: 1em;
      line-height: 1.5em;
      padding: 2.5vw;
      margin-block-start: 0em;
      
  }
-
+ .main-process{
+    background-color: white;
+    color: black;
+    box-sizing: content-box;
+   /* max-width: 480px;*/
+    margin: 1vw;
+}
+.process{
+    font-family: fira sans;
+    font-weight: bolder;
+    font-size:1.5em;
+    text-shadow:black 0.9px -0.3px;
+    letter-spacing: 0.05em;
+    margin-top: 4vw;
+        
+   
+}
  .process-list{
      padding: 2.5vw;
      
@@ -197,7 +253,7 @@ img{
  .process-heading{
      font-family: fira sans;
      font-weight: bolder;
-     font-size: 0.9em;
+     font-size: 1.2em;
      text-shadow: black 0.9px -0.3px;
      margin-block-start: 0em;
      
@@ -205,14 +261,14 @@ img{
 
 .process-para{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 0.72em;
+    font-size: 1em;
     color: black;
     text-align: justify;
 }
 .process-title{
     margin-block-start: 0em;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 0.72em;
+    font-size: 0.86em;
     color:#e49204;
     text-align: center;
     font-weight: bold;
@@ -242,21 +298,21 @@ table{
     background-color: #eeeeee;
 }
 
-#footer{
+footer{
     background-color: #222028;
-    max-width: 480px;
-    margin:5vw auto auto -1vw;
-    max-height: 100%;
+   /* max-width: 480px;*/
+    /*margin:5vw auto auto -1vw;*/
+    /*max-height: 100%;*/
 }
 
 .footer-left{
-    max-width: 120px;
+   max-width: 140px;
     
 }
 .footer-para{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
-    font-size: 0.72em;
+    font-size: 0.9em;
     padding: 2.5vw;
     line-height: 1.5em;
     text-align: justify;
@@ -268,5 +324,116 @@ table{
     font-weight: bold;
     text-decoration:underline;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+@media only screen and (min-width:600px){
+
+header{
+    background-image: url("/img/ingredients-960w.jpg");
+        display: block;
+
+}
+
+.h5{
+    font-size: 1em;
+}
+.h1,.h5, .header-para{
+    margin-left: 50px;
+}
+.header-list{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    font-size: 1em;
+  
+}
+.header-para{
+    max-width:550px;
+}
+.footer-left{
+    max-width: 180px;
+     
+ }
+}
+
+
+
+
+@media only screen and (min-width:850px){
+body{
+    background-color: #353A42;
+}
+
+header{
+    background-image: url("/img/ingredients-1920w.jpg");
+    display: block;
+    height: 350px;
+    grid-column: 1 / span 2;
+    }
+.header-list{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    font-size: 1em;
+  
+}
+.header-list li{
+    display: grid;
+    text-align: center;
+}
+.h1,.h5, .header-para{
+    margin-left: 200px;
+}
+.recipe{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.main-ingredients{
+    grid-row: 2 / span 6;
+    background-color: #ffbc48;
+    margin-top: -4vw;
+    margin-left: 200px;
+    padding-right:100px;
+}
+nav{
+    margin-top: -4vw;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1vw;
+}
+.ingredients-heading, .equipment-heading{
+    margin-left: 30px;
+}
+.ingredients-list, .equipment-list{
+    margin-left: 15px;
+}
+.process{
+    margin-top:2vw;
+}
+.main-story, .main-process{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left:0;
+    margin-top:-13px;
+}
+
+nav, .main-story, .main-process, footer{
+    margin-right: 200px;
+}
+
+footer{
+    margin-top: -10px;
+}
+}
+
+
