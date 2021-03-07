@@ -21,7 +21,7 @@ body{
 }
 
 header{
-    background-image: url("/img/ingredients-480w.jpg");
+    background-image: url("../img/ingredients-480w.jpg");
     background-color:#353A42;
     background-blend-mode: multiply;
     
@@ -336,7 +336,7 @@ footer{
 @media only screen and (min-width:600px){
 
 header{
-    background-image: url("/img/ingredients-960w.jpg");
+    background-image: url("../img/ingredients-960w.jpg");
         display: block;
 
 }
@@ -372,7 +372,7 @@ body{
 }
 
 header{
-    background-image: url("/img/ingredients-1920w.jpg");
+    background-image: url("../img/ingredients-1920w.jpg");
     display: block;
     height: 350px;
     grid-column: 1 / span 2;
